@@ -17,6 +17,9 @@
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
     </None>
+    <None Include="..\..\Config\DefaultEditorSettings.ini">
+      <Filter>Config</Filter>
+    </None>
     <None Include="..\..\Config\DefaultEngine.ini">
       <Filter>Config</Filter>
     </None>
@@ -26,6 +29,9 @@
     <Filter Include="Source\MarchingCubes">
       <UniqueIdentifier>{EEE99968-1A3C-318D-B16C-AAA35437EE41}</UniqueIdentifier>
     </Filter>
+    <ClInclude Include="..\..\Source\MarchingCubes\FastNoiseLite.h">
+      <Filter>Source\MarchingCubes</Filter>
+    </ClInclude>
     <None Include="..\..\Source\MarchingCubes\MarchingCubes.Build.cs">
       <Filter>Source\MarchingCubes</Filter>
     </None>
@@ -39,6 +45,12 @@
       <Filter>Source\MarchingCubes</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\MarchingCubes\MarchingCubesGameModeBase.h">
+      <Filter>Source\MarchingCubes</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\MarchingCubes\MChunk.cpp">
+      <Filter>Source\MarchingCubes</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MarchingCubes\MChunk.h">
       <Filter>Source\MarchingCubes</Filter>
     </ClInclude>
   </ItemGroup>

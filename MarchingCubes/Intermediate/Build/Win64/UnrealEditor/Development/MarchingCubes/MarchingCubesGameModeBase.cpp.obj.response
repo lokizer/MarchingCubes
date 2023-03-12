@@ -1,7 +1,8 @@
 D:\Github\MarchingCubes\MarchingCubes\Source\MarchingCubes\MarchingCubesGameModeBase.cpp
 /I .
-/I D:\Github\MarchingCubes\MarchingCubes\Intermediate\Build\Win64\UnrealEditor\Inc\MarchingCubes
-/I D:\Github\MarchingCubes\MarchingCubes\Source
+/I ..\Plugins\Runtime\ProceduralMeshComponent\Intermediate\Build\Win64\UnrealEditor\Inc\ProceduralMeshComponent
+/I ..\Plugins\Runtime\ProceduralMeshComponent\Source
+/I ..\Plugins\Runtime\ProceduralMeshComponent\Source\ProceduralMeshComponent\Public
 /I Runtime
 /I Runtime\TraceLog\Public
 /I Runtime\Core\Public
@@ -253,6 +254,8 @@ D:\Github\MarchingCubes\MarchingCubes\Source\MarchingCubes\MarchingCubesGameMode
 /I Runtime\ClothingSystemRuntimeInterface\Public
 /I ..\Intermediate\Build\Win64\UnrealEditor\Inc\AnimationDataController
 /I Developer\AnimationDataController\Public
+/I D:\Github\MarchingCubes\MarchingCubes\Intermediate\Build\Win64\UnrealEditor\Inc\MarchingCubes
+/I D:\Github\MarchingCubes\MarchingCubes\Source
 /I ThirdParty\mimalloc\include
 /I ThirdParty\LibTiff\Source\Win64
 /I ThirdParty\LibTiff\Source
