@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "MarchingCubes",
+			"Path": "D:\\Github\\MarchingCubes\\MarchingCubes\\Source\\MarchingCubes.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "MarchingCubesEditor",
+			"Path": "D:\\Github\\MarchingCubes\\MarchingCubes\\Source\\MarchingCubesEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

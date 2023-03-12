@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"D:\\Github\\MarchingCubes\\MarchingCubes\\Source\\MarchingCubes\\MarchingCubes.Build.cs",
+		"D:\\Github\\MarchingCubes\\MarchingCubes\\Source\\MarchingCubes.Target.cs",
+		"D:\\Github\\MarchingCubes\\MarchingCubes\\Source\\MarchingCubesEditor.Target.cs"
+	],
+	"EngineVersion": "5.0.3"
+}
