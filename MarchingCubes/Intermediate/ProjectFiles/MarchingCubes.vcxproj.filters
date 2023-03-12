@@ -38,6 +38,9 @@
     <Filter Include="Source\MarchingCubes">
       <UniqueIdentifier>{EEE99968-1A3C-318D-B16C-AAA35437EE41}</UniqueIdentifier>
     </Filter>
+    <ClInclude Include="..\..\Source\MarchingCubes\ChunkMeshData.h">
+      <Filter>Source\MarchingCubes</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\MarchingCubes\Enum.h">
       <Filter>Source\MarchingCubes</Filter>
     </ClInclude>
@@ -63,6 +66,12 @@
       <Filter>Source\MarchingCubes</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\MarchingCubes\MChunk.h">
+      <Filter>Source\MarchingCubes</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\MarchingCubes\MChunkBase.cpp">
+      <Filter>Source\MarchingCubes</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MarchingCubes\MChunkBase.h">
       <Filter>Source\MarchingCubes</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\MarchingCubes\MChunkWorld.cpp">
