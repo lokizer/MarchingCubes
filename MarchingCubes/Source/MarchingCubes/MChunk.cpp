@@ -15,10 +15,6 @@ AMChunk::AMChunk()
 	Mesh = CreateDefaultSubobject<UProceduralMeshComponent>("Mesh");
 
 	Noise = new FastNoiseLite();
-	Noise->SetFrequency(0.03f);
-	Noise->SetNoiseType(FastNoiseLite::NoiseType_Perlin);
-	Noise->SetFractalType(FastNoiseLite::FractalType_FBm);
-
 	Blocks.SetNum(Size*Size*Size);
 
 	Mesh->SetCastShadow(CastShdow);
@@ -28,11 +24,18 @@ AMChunk::AMChunk()
 void AMChunk::BeginPlay()
 {
 	Super::BeginPlay();
+	
+	Noise->SetFrequency(0.03f);
+	Noise->SetNoiseType(FastNoiseLite::NoiseType_Perlin);
+	Noise->SetFractalType(FastNoiseLite::FractalType_FBm);
+
 	GenerateBlocks();
 
 	GenerateMesh();
 
 	ApplyMesh();
+
+	UE_LOG(LogTemp, Warning, TEXT("Vertex Count : %d"), VertexCount);
 }
 
 // Called every frame

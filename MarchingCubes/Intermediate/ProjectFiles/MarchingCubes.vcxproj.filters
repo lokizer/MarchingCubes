@@ -17,6 +17,9 @@
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
     </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
     <None Include="..\..\Config\DefaultEditorSettings.ini">
       <Filter>Config</Filter>
     </None>
@@ -26,9 +29,18 @@
     <None Include="..\..\Config\DefaultGame.ini">
       <Filter>Config</Filter>
     </None>
+    <Filter Include="Config\HoloLens">
+      <UniqueIdentifier>{4C8DD267-CDE7-336F-8602-F5F485D22BAB}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\HoloLens\HoloLensEngine.ini">
+      <Filter>Config\HoloLens</Filter>
+    </None>
     <Filter Include="Source\MarchingCubes">
       <UniqueIdentifier>{EEE99968-1A3C-318D-B16C-AAA35437EE41}</UniqueIdentifier>
     </Filter>
+    <ClInclude Include="..\..\Source\MarchingCubes\Enum.h">
+      <Filter>Source\MarchingCubes</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\MarchingCubes\FastNoiseLite.h">
       <Filter>Source\MarchingCubes</Filter>
     </ClInclude>
@@ -51,6 +63,12 @@
       <Filter>Source\MarchingCubes</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\MarchingCubes\MChunk.h">
+      <Filter>Source\MarchingCubes</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\MarchingCubes\MChunkWorld.cpp">
+      <Filter>Source\MarchingCubes</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MarchingCubes\MChunkWorld.h">
       <Filter>Source\MarchingCubes</Filter>
     </ClInclude>
   </ItemGroup>
