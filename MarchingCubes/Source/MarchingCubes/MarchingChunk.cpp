@@ -82,7 +82,7 @@ void AMarchingChunk::GenerateMesh()
 }
 
 
-void AMarchingChunk::March(int x, int y, int z, const float Cube[8])
+void AMarchingChunk::March(const int x, const int y, const int z, const float Cube[8])
 {
 	int VertexMask = 0;
 	FVector EdgeVertex[12];
@@ -148,13 +148,13 @@ void AMarchingChunk::March(int x, int y, int z, const float Cube[8])
 	}
 }
 
-int AMarchingChunk::GetVoxelsIndex(int x, int y, int z) const
+int AMarchingChunk::GetVoxelsIndex(const int x, const int y, const int z) const
 {
 	
 	return z * (Size + 1) * (Size + 1) + y * (Size + 1) + x;
 }
 
-float AMarchingChunk::GetInterpolationOffset(float V1, float V2) const
+float AMarchingChunk::GetInterpolationOffset(const float V1, const float V2) const
 {
 	const float Delta = V2 - V1;
 	return Delta == 0.0f ? SurfaceLevel : (SurfaceLevel - V1) / Delta;

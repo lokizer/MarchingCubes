@@ -10,7 +10,7 @@
  * 
  */
 UCLASS()
-class MARCHINGCUBES_API AMarchingChunk : public AMChunkBase
+class AMarchingChunk final : public AMChunkBase
 {
 	GENERATED_BODY()
 public:
