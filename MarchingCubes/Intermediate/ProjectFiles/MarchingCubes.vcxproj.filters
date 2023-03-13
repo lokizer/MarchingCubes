@@ -47,6 +47,12 @@
     <ClInclude Include="..\..\Source\MarchingCubes\FastNoiseLite.h">
       <Filter>Source\MarchingCubes</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\MarchingCubes\MarchingChunk.cpp">
+      <Filter>Source\MarchingCubes</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MarchingCubes\MarchingChunk.h">
+      <Filter>Source\MarchingCubes</Filter>
+    </ClInclude>
     <None Include="..\..\Source\MarchingCubes\MarchingCubes.Build.cs">
       <Filter>Source\MarchingCubes</Filter>
     </None>
@@ -60,12 +66,6 @@
       <Filter>Source\MarchingCubes</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\MarchingCubes\MarchingCubesGameModeBase.h">
-      <Filter>Source\MarchingCubes</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\MarchingCubes\MChunk.cpp">
-      <Filter>Source\MarchingCubes</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\MarchingCubes\MChunk.h">
       <Filter>Source\MarchingCubes</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\MarchingCubes\MChunkBase.cpp">

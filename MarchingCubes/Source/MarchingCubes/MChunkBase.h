@@ -26,7 +26,9 @@ public:
 	int Size = 64;
 
 	TObjectPtr<UMaterialInterface> Material;
+	
 	float Frequency;
+
 	EGenerationType GenerationType;
 
 	UFUNCTION(BlueprintCallable, Category = "Chunk")

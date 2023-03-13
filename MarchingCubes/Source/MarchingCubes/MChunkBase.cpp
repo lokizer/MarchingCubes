@@ -31,7 +31,7 @@ void AMChunkBase::BeginPlay()
 	Noise->SetFrequency(Frequency);
 	Noise->SetNoiseType(FastNoiseLite::NoiseType_Perlin);
 	Noise->SetFractalType(FastNoiseLite::FractalType_FBm);
-
+	
 	Setup();
 	
 	GenerateHeightMap();
