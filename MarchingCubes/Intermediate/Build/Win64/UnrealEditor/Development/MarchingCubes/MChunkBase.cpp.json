@@ -1,0 +1,34 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "d:\\github\\marchingcubes\\marchingcubes\\source\\marchingcubes\\mchunkbase.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\github\\marchingcubes\\marchingcubes\\intermediate\\build\\win64\\marchingcubeseditor\\development\\engine\\sharedpch.engine.shadowerrors.h.pch",
+        "Includes": [
+            "d:\\github\\marchingcubes\\marchingcubes\\intermediate\\build\\win64\\unrealeditor\\development\\marchingcubes\\definitions.marchingcubes.h",
+            "d:\\github\\marchingcubes\\marchingcubes\\source\\marchingcubes\\mchunkbase.h",
+            "d:\\github\\marchingcubes\\marchingcubes\\source\\marchingcubes\\enum.h",
+            "d:\\github\\marchingcubes\\marchingcubes\\source\\marchingcubes\\chunkmeshdata.h",
+            "d:\\github\\marchingcubes\\marchingcubes\\intermediate\\build\\win64\\unrealeditor\\inc\\marchingcubes\\chunkmeshdata.generated.h",
+            "d:\\github\\marchingcubes\\marchingcubes\\intermediate\\build\\win64\\unrealeditor\\inc\\marchingcubes\\mchunkbase.generated.h",
+            "d:\\github\\marchingcubes\\marchingcubes\\source\\marchingcubes\\fastnoiselite.h",
+            "d:\\ue_5.0\\engine\\source\\runtime\\navigationsystem\\public\\navigationdata.h",
+            "d:\\ue_5.0\\engine\\source\\runtime\\navigationsystem\\public\\navfilters\\navigationqueryfilter.h",
+            "d:\\ue_5.0\\engine\\source\\runtime\\navigationsystem\\public\\navareas\\navarea.h",
+            "d:\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\ai\\navigation\\navareabase.h",
+            "d:\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\navareabase.generated.h",
+            "d:\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\navigationsystem\\navarea.generated.h",
+            "d:\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\navigationsystem\\navigationqueryfilter.generated.h",
+            "d:\\ue_5.0\\engine\\source\\runtime\\navigationsystem\\public\\navigationsystemtypes.h",
+            "d:\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\ai\\navigationsystemconfig.h",
+            "d:\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\navigationsystemconfig.generated.h",
+            "d:\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\ai\\navigation\\navigationdatainterface.h",
+            "d:\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\navigationdatainterface.generated.h",
+            "d:\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\navigationsystem\\navigationdata.generated.h",
+            "d:\\ue_5.0\\engine\\plugins\\runtime\\proceduralmeshcomponent\\source\\proceduralmeshcomponent\\public\\proceduralmeshcomponent.h",
+            "d:\\ue_5.0\\engine\\plugins\\runtime\\proceduralmeshcomponent\\intermediate\\build\\win64\\unrealeditor\\inc\\proceduralmeshcomponent\\proceduralmeshcomponent.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

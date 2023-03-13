@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "d:\\github\\marchingcubes\\marchingcubes\\intermediate\\build\\win64\\unrealeditor\\inc\\marchingcubes\\mchunkworld.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\github\\marchingcubes\\marchingcubes\\intermediate\\build\\win64\\marchingcubeseditor\\development\\engine\\sharedpch.engine.shadowerrors.h.pch",
+        "Includes": [
+            "d:\\github\\marchingcubes\\marchingcubes\\intermediate\\build\\win64\\unrealeditor\\development\\marchingcubes\\definitions.marchingcubes.h",
+            "d:\\github\\marchingcubes\\marchingcubes\\source\\marchingcubes\\mchunkworld.h",
+            "d:\\github\\marchingcubes\\marchingcubes\\intermediate\\build\\win64\\unrealeditor\\inc\\marchingcubes\\mchunkworld.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

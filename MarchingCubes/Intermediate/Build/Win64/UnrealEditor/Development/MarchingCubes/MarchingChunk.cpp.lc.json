@@ -1,0 +1,20 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "d:\\github\\marchingcubes\\marchingcubes\\source\\marchingcubes\\marchingchunk.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\github\\marchingcubes\\marchingcubes\\intermediate\\build\\win64\\marchingcubeseditor\\development\\engine\\sharedpch.engine.shadowerrors.h.pch",
+        "Includes": [
+            "d:\\github\\marchingcubes\\marchingcubes\\intermediate\\build\\win64\\unrealeditor\\development\\marchingcubes\\definitions.marchingcubes.h",
+            "d:\\github\\marchingcubes\\marchingcubes\\source\\marchingcubes\\marchingchunk.h",
+            "d:\\github\\marchingcubes\\marchingcubes\\source\\marchingcubes\\mchunkbase.h",
+            "d:\\github\\marchingcubes\\marchingcubes\\source\\marchingcubes\\enum.h",
+            "d:\\github\\marchingcubes\\marchingcubes\\source\\marchingcubes\\chunkmeshdata.h",
+            "d:\\github\\marchingcubes\\marchingcubes\\intermediate\\build\\win64\\unrealeditor\\inc\\marchingcubes\\chunkmeshdata.generated.h",
+            "d:\\github\\marchingcubes\\marchingcubes\\intermediate\\build\\win64\\unrealeditor\\inc\\marchingcubes\\mchunkbase.generated.h",
+            "d:\\github\\marchingcubes\\marchingcubes\\intermediate\\build\\win64\\unrealeditor\\inc\\marchingcubes\\marchingchunk.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

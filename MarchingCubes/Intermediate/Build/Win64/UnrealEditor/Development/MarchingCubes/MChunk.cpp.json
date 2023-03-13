@@ -1,0 +1,19 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "d:\\github\\marchingcubes\\marchingcubes\\source\\marchingcubes\\mchunk.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\github\\marchingcubes\\marchingcubes\\intermediate\\build\\win64\\marchingcubeseditor\\development\\engine\\sharedpch.engine.shadowerrors.h.pch",
+        "Includes": [
+            "d:\\github\\marchingcubes\\marchingcubes\\intermediate\\build\\win64\\unrealeditor\\development\\marchingcubes\\definitions.marchingcubes.h",
+            "d:\\github\\marchingcubes\\marchingcubes\\source\\marchingcubes\\mchunk.h",
+            "d:\\github\\marchingcubes\\marchingcubes\\intermediate\\build\\win64\\unrealeditor\\inc\\marchingcubes\\mchunk.generated.h",
+            "d:\\github\\marchingcubes\\marchingcubes\\source\\marchingcubes\\enum.h",
+            "d:\\github\\marchingcubes\\marchingcubes\\source\\marchingcubes\\fastnoiselite.h",
+            "d:\\ue_5.0\\engine\\plugins\\runtime\\proceduralmeshcomponent\\source\\proceduralmeshcomponent\\public\\proceduralmeshcomponent.h",
+            "d:\\ue_5.0\\engine\\plugins\\runtime\\proceduralmeshcomponent\\intermediate\\build\\win64\\unrealeditor\\inc\\proceduralmeshcomponent\\proceduralmeshcomponent.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
