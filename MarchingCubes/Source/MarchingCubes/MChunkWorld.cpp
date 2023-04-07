@@ -52,7 +52,7 @@ void AMChunkWorld::Generate3DWorld()
 					transform,
 					this
 				);
-
+				
 				chunk->GenerationType = EGenerationType::GT_3D;
 				chunk->Frequency = Frequency;
 				chunk->Material = Material;

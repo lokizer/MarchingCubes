@@ -20,7 +20,7 @@ void AMarchingChunk::Generate2DHeightMap(const FVector Position)
 			const float ypos = y + Position.Y;
 			
 			const int Height = FMath::Clamp(FMath::RoundToInt((Noise->GetNoise(Xpos, ypos) + 1) * Size / 2), 0, Size);
-
+			//const float height = Noise->GetNoise(Xpos,ypos);
 			for (int z = 0; z < Height; z++)
 			{
 				Voxels[GetVoxelsIndex(x,y,z)] = 1.0f;
@@ -90,7 +90,8 @@ void AMarchingChunk::March(const int x, const int y, const int z, const float Cu
 	// 判断顶点在表面还是内部
 	for (int i = 0; i < 8; ++i)
 	{
-		if (Cube[i] <= SurfaceLevel) VertexMask |= 1 << i;
+		if (Cube[i] <= SurfaceLevel)
+			VertexMask |= 1 << i;
 	}
 
 	const int EdgeMask = CubeEdgeFlags[VertexMask];
