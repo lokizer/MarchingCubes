@@ -27,6 +27,7 @@ public:
 	
 	TArray<Point> maze;
 	Stack s0;
+	int num;
 protected:
 	virtual void BeginPlay() override;
 	int GetMazeIndex(int x,int y);

@@ -101,5 +101,14 @@
     <ClInclude Include="..\..\Source\MarchingCubes\Stack.h">
       <Filter>Source\MarchingCubes</Filter>
     </ClInclude>
+    <Filter Include="Source\MarchingCubes\BackTraking">
+      <UniqueIdentifier>{DE08350D-C745-3F4E-AC31-7C03412F13E5}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\MarchingCubes\BackTraking\MBackTrackUp.cpp">
+      <Filter>Source\MarchingCubes\BackTraking</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MarchingCubes\BackTraking\MBackTrackUp.h">
+      <Filter>Source\MarchingCubes\BackTraking</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -8,7 +8,6 @@
 #include "Kismet/GameplayStatics.h"
 
 
-int num = 1;
 // Sets default values
 AMBackTrack::AMBackTrack()
 {
@@ -19,11 +18,15 @@ AMBackTrack::AMBackTrack()
 void AMBackTrack::BeginPlay()
 {
 	Super::BeginPlay();
-	InitMaze();
-	s0.Push(maze[GetMazeIndex((int)StartPoint.X,(int)StartPoint.Y)]);
-	BackTracking(maze[GetMazeIndex((int)StartPoint.X,(int)StartPoint.Y)],s0);
+	num = 1; //初始化计数器
 	
-	PrintMaze();
+	InitMaze(); //初始化迷宫
+	
+	s0.Push(maze[GetMazeIndex((int)StartPoint.X,(int)StartPoint.Y)]); //设定迷宫起点
+	
+	BackTracking(maze[GetMazeIndex((int)StartPoint.X,(int)StartPoint.Y)],s0);//递归创建迷宫
+	
+	PrintMaze(); //打印迷宫，生成StaticMesh
 }
 
 
@@ -31,7 +34,7 @@ void AMBackTrack::InitMaze()
 {
 	for (int x = 0; x < MazeSize; x++) {
 		for (int y = 0; y < MazeSize; y++) {
-			if ((x + y) % 2 == 0 && x != 0 && y != 0 && x != MazeSize - 1 && y != MazeSize - 1 && x % 2 != 0) {
+			if ((x + y) % 2 == 0 && x != 0 && y != 0 && x != MazeSize - 1 && y != MazeSize - 1 && x % 2 != 0) { //九宫格中只有一个赋值1，其余全为0
 				Point p;
 				p.x = x;
 				p.y = y;
@@ -104,7 +107,7 @@ void AMBackTrack::PrintMaze()
 	for (int i = 0; i < MazeSize; i++) {
 		for (int j = 0; j < MazeSize; j++) {
 
-			if (maze[GetMazeIndex(i,j)].value == 0 && maze[GetMazeIndex(i,j)].flag != true)
+			if (maze[GetMazeIndex(i,j)].value == 0 && maze[GetMazeIndex(i,j)].flag != true) //当value为0时，代表是墙壁，z上升
 			{
 				auto transform = FTransform(
 			FRotator::ZeroRotator,
@@ -120,7 +123,7 @@ void AMBackTrack::PrintMaze()
 
 				UGameplayStatics::FinishSpawningActor(chunk, transform);
 			}
-			else if (maze[GetMazeIndex(i,j)].value == 1 || maze[GetMazeIndex(i,j)].flag == true)
+			else if (maze[GetMazeIndex(i,j)].value == 1 || maze[GetMazeIndex(i,j)].flag == true) //当value为1时，代表是地板，z轴下降
 			{
 				auto transform = FTransform(
 			FRotator::ZeroRotator,
