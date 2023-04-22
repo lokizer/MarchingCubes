@@ -95,6 +95,12 @@
     <ClInclude Include="..\..\Source\MarchingCubes\Point.h">
       <Filter>Source\MarchingCubes</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\MarchingCubes\Room.cpp">
+      <Filter>Source\MarchingCubes</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MarchingCubes\Room.h">
+      <Filter>Source\MarchingCubes</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\MarchingCubes\Stack.cpp">
       <Filter>Source\MarchingCubes</Filter>
     </ClCompile>
@@ -108,6 +114,12 @@
       <Filter>Source\MarchingCubes\BackTraking</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\MarchingCubes\BackTraking\MBackTrackUp.h">
+      <Filter>Source\MarchingCubes\BackTraking</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\MarchingCubes\BackTraking\MTrackingWall.cpp">
+      <Filter>Source\MarchingCubes\BackTraking</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MarchingCubes\BackTraking\MTrackingWall.h">
       <Filter>Source\MarchingCubes\BackTraking</Filter>
     </ClInclude>
   </ItemGroup>

@@ -23,8 +23,11 @@ public:
 	FVector2D StartPoint;
 
 	UPROPERTY(EditAnywhere, Category = "Maze")
-	TSubclassOf<AActor> ChunkType;
+	TSubclassOf<AActor> ChunkBase;
 
+	UPROPERTY(EditAnywhere, Category = "Maze")
+	TSubclassOf<AActor> ChunkWall;
+	
 	UPROPERTY(EditAnywhere, Category = "Maze")
 	int RoomNum;
 	
@@ -42,7 +45,8 @@ protected:
 	void BackTracking(Point point,Stack &s);
 	void Link();
 	void PrintMaze();
-	
+	void Click();
+	void RecursiveClick(Point &p);
 public:	
 	virtual void Tick(float DeltaTime) override;
 

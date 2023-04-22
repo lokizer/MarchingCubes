@@ -17,10 +17,10 @@ public:
 	int Size = 64;
 	UPROPERTY(EditAnywhere, Category = "Track")
 	UMaterial* Material;
+	UPROPERTY(EditAnywhere, Category = "Track")
+	UStaticMeshComponent* Mesh;
 protected:
 	virtual void BeginPlay() override;
-	
-	UStaticMeshComponent* Mesh;
 
 public:	
 	virtual void Tick(float DeltaTime) override;

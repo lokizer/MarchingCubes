@@ -27,6 +27,8 @@ void AMBackTrackUp::BeginPlay()
 	BackTracking(maze[GetMazeIndex((int)StartPoint.X,(int)StartPoint.Y)],s0);//递归创建迷宫
 
 	Link();
+
+	Click();
 	
 	PrintMaze(); //打印迷宫，生成StaticMesh
 }
@@ -185,6 +187,62 @@ void AMBackTrackUp::Link()
 	}
 }
 
+void AMBackTrackUp::RecursiveClick(Point &p) {
+	TArray<int> road;
+	if (p.x != 0 && maze[GetMazeIndex(p.x - 1,p.y)].flag == true)
+		road.Add(0);
+	if (p.x != MazeSize - 1 && maze[GetMazeIndex(p.x + 1,p.y)].flag == true)
+		road.Add(1);
+	if (p.y != 0 && maze[GetMazeIndex(p.x,p.y - 1)].flag == true)
+		road.Add(2);
+	if (p.y != MazeSize - 1 && maze[GetMazeIndex(p.x,p.y + 1)].flag == true)
+		road.Add(3);
+
+	if (road.Num() == 1) {
+		maze[GetMazeIndex(p.x,p.y)].flag = false;
+		if (maze[GetMazeIndex(p.x,p.y)].value == 1)
+			maze[GetMazeIndex(p.x,p.y)].value = 0;
+		switch (road[0])
+		{
+		case 0:
+			RecursiveClick(maze[GetMazeIndex(p.x - 1,p.y)]);
+			break;
+		case 1:
+			RecursiveClick(maze[GetMazeIndex(p.x + 1,p.y)]);
+			break;
+		case 2:
+			RecursiveClick(maze[GetMazeIndex(p.x,p.y - 1)]);
+			break;
+		case 3:
+			RecursiveClick(maze[GetMazeIndex(p.x,p.y + 1)]);
+			break;
+		default:
+			break;
+		}
+	}
+}
+
+
+void AMBackTrackUp::Click() {
+	for (int i = 0; i < MazeSize; i++) {
+		for (int j = 0; j < MazeSize; j++) {
+			TArray<int> road;
+			if (i != 0 && i != MazeSize - 1 && maze[GetMazeIndex(i - 1,j)].flag == true)
+				road.Add(0);
+			if (i != 0 && i != MazeSize - 1 && maze[GetMazeIndex(i + 1,j)].flag == true)
+				road.Add(1);
+			if (j != 0 && j != MazeSize - 1 && maze[GetMazeIndex(i,j - 1)].flag == true)
+				road.Add(2);
+			if (j != 0 && j != MazeSize - 1 && maze[GetMazeIndex(i,j + 1)].flag == true)
+				road.Add(3);
+			if (road.Num() == 1)
+				RecursiveClick(maze[GetMazeIndex(i,j)]);
+		}
+	}
+}
+
+
+
 void AMBackTrackUp::PrintMaze()
 {
 	for (int i = 0; i < MazeSize; i++) {
@@ -199,7 +257,7 @@ void AMBackTrackUp::PrintMaze()
 				);
 
 				const auto chunk = GetWorld()->SpawnActorDeferred<AActor>(
-					ChunkType,
+					ChunkWall,
 					transform,
 					this
 				);
@@ -215,7 +273,7 @@ void AMBackTrackUp::PrintMaze()
 				);
 
 				const auto chunk = GetWorld()->SpawnActorDeferred<AActor>(
-					ChunkType,
+					ChunkBase,
 					transform,
 					this
 				);
