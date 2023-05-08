@@ -20,6 +20,7 @@ public:
 	UPROPERTY(EditAnywhere, Category = "Marching Cubes");
 	bool Interpolation;
 
+	
 protected:
 	virtual void Generate2DHeightMap(const FVector Position) override;
 	virtual void Generate3DHeightMap(const FVector Position) override;

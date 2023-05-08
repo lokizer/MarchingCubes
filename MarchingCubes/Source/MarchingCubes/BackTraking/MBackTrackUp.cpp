@@ -152,11 +152,11 @@ void AMBackTrackUp::Link()
 			int randNum2 = rand() % room[i].Roomsize + room[i].Bound2;
 			if (room[i].Bound2 != 1 && maze[GetMazeIndex(randNum1,room[i].Bound2 - 2)].flag == true) //房间最左边随机取点， 左
 				road.Add(0);
-			if ((room[i].Bound2 + room[i].Roomsize) != MazeSize - 1 && maze[GetMazeIndex(randNum1,room[i].Bound2 + room[i].Roomsize + 2)].flag == true) //房间最右边随机取点， 右
+			if ((room[i].Bound2 + room[i].Roomsize) != MazeSize - 1 && maze[GetMazeIndex(randNum1,room[i].Bound2 + room[i].Roomsize + 1)].flag == true) //房间最右边随机取点， 右
 				road.Add(1);
 			if (room[i].Bound1 != 1 && maze[GetMazeIndex(room[i].Bound1 - 2,randNum2)].flag == true) //房间最上边随机取点， 上
 				road.Add(2);
-			if ((room[i].Bound1 + room[i].Roomsize) != MazeSize - 1 && maze[GetMazeIndex(room[i].Bound1 + room[i].Roomsize + 2,randNum2)].flag == true) //房间最下边随机取点， 下
+			if ((room[i].Bound1 + room[i].Roomsize) != MazeSize - 1 && maze[GetMazeIndex(room[i].Bound1 + room[i].Roomsize + 1,randNum2)].flag == true) //房间最下边随机取点， 下
 				road.Add(3);
 			if (road.Num() != 0) {
 				for (int x = 0; x < road.Num(); x++) {
@@ -164,15 +164,19 @@ void AMBackTrackUp::Link()
 					{
 					case 0:
 						maze[GetMazeIndex(randNum1,room[i].Bound2 - 1)].flag = true;
+						maze[GetMazeIndex(randNum1,room[i].Bound2 - 1)].value = 3;
 						break;
 					case 1:
-						maze[GetMazeIndex(randNum1,room[i].Bound2 + 1)].flag = true;
+						maze[GetMazeIndex(randNum1,room[i].Bound2 + room[i].Roomsize)].flag = true;
+						maze[GetMazeIndex(randNum1,room[i].Bound2 + room[i].Roomsize)].value = 3;
 						break;
 					case 2:
 						maze[GetMazeIndex(room[i].Bound1 - 1,randNum2)].flag = true;
+						maze[GetMazeIndex(room[i].Bound1 - 1,randNum2)].value = 3;
 						break;
 					case 3:
-						maze[GetMazeIndex(room[i].Bound1 + 1,randNum2)].flag = true;
+						maze[GetMazeIndex(room[i].Bound1 + room[i].Roomsize,randNum2)].flag = true;
+						maze[GetMazeIndex(room[i].Bound1 + room[i].Roomsize,randNum2)].value = 3;
 						break;
 					default:
 						break;
@@ -252,7 +256,7 @@ void AMBackTrackUp::PrintMaze()
 				{
 				auto transform = FTransform(
 			FRotator::ZeroRotator,
-			FVector(i  * 100, j  * 100,  200),
+			FVector(i  * 256, j  * 256, 512),
 			FVector::OneVector
 				);
 
@@ -264,11 +268,28 @@ void AMBackTrackUp::PrintMaze()
 
 				UGameplayStatics::FinishSpawningActor(chunk, transform);
 				}
+
+			else if (maze[GetMazeIndex(i,j)].value == 3) //当value为3时，代表是门
+				{
+				auto transform = FTransform(
+			FRotator::ZeroRotator,
+			FVector(i * 256, j  * 256, 256),
+			FVector::OneVector
+				);
+
+				const auto chunk = GetWorld()->SpawnActorDeferred<AActor>(
+					ChunkDoor,
+					transform,
+					this
+				);
+				UGameplayStatics::FinishSpawningActor(chunk, transform);
+				}
+			
 			else if (maze[GetMazeIndex(i,j)].value == 1 || maze[GetMazeIndex(i,j)].flag == true) //当value为1时，代表是地板，z轴下降
 				{
 				auto transform = FTransform(
 			FRotator::ZeroRotator,
-			FVector(i * 100, j  * 100,  100),
+			FVector(i * 256, j  * 256,  256),
 			FVector::OneVector
 				);
 
@@ -279,6 +300,7 @@ void AMBackTrackUp::PrintMaze()
 				);
 				UGameplayStatics::FinishSpawningActor(chunk, transform);
 				}
+			
 		}
 	}
 }

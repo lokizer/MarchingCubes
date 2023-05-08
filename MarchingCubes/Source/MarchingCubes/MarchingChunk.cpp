@@ -20,15 +20,16 @@ void AMarchingChunk::Generate2DHeightMap(const FVector Position)
 			const float ypos = y + Position.Y;
 			
 			const int Height = FMath::Clamp(FMath::RoundToInt((Noise->GetNoise(Xpos, ypos) + 1) * Size / 2), 0, Size);
-			//const float height = Noise->GetNoise(Xpos,ypos);
 			for (int z = 0; z < Height; z++)
 			{
-				Voxels[GetVoxelsIndex(x,y,z)] = 1.0f;
+				//Voxels[GetVoxelsIndex(x,y,z)] = 1.0f;
+				Voxels[GetVoxelsIndex(x,y,z)] = abs(Noise->GetNoise(x + Position.X, y + Position.Y, z + Position.Z));
 			}
 
 			for (int z = Height; z < Size; z++)
 			{
-				Voxels[GetVoxelsIndex(x,y,z)] = -1.0f;
+				//Voxels[GetVoxelsIndex(x,y,z)] = -1.0f;
+				Voxels[GetVoxelsIndex(x,y,z)] = -abs(Noise->GetNoise(x + Position.X, y + Position.Y, z + Position.Z));
 			}
 		}
 	}

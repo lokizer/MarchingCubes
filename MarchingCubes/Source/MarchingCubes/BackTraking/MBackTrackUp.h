@@ -27,6 +27,9 @@ public:
 
 	UPROPERTY(EditAnywhere, Category = "Maze")
 	TSubclassOf<AActor> ChunkWall;
+
+	UPROPERTY(EditAnywhere, Category = "Maze")
+	TSubclassOf<AActor> ChunkDoor;
 	
 	UPROPERTY(EditAnywhere, Category = "Maze")
 	int RoomNum;
